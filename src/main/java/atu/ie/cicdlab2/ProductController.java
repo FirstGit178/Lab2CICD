@@ -18,6 +18,12 @@ public class ProductController {
         myList.add(myProduct);
         return myProduct;
     }
+    @PostMapping("/addAllProduct")
+    public List<Product> addAllProduct(@RequestBody List<Product> myProduct)
+    {
+        myList.addAll(myProduct);
+        return myList;
+    }
 
     @GetMapping("/getProduct")
     public List <Product> getProduct()
